@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+  <script>
+    function submitForm() {
+      $.ajax({
+        url: "https://api.apispreadsheets.com/data/mblHh0iPdIuMiOt9/",
+        type: "post",
+        data: $("#send_form").serializeArray(),
+        success: function () {
+          alert("Данные успещно обработаны. Скоро мы с вами свяжемся.")
+          // $('#send_form')[0].reset();
+          // $('#send_form')[1].reset();
+          $('#send_form').trigger('reset');
+        },
+        error: function () {
+          alert("Произошла ошибка, Повторите ще раз")
+        }
+      });
+    }
+  </script>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="navbar">
+        <img src="images/logotip.png" alt="" />
+        <div class="menu">
+          <ul>
+            <li><a href="">5 этапов обучения</a></li>
+            <li><a href="">Формат обучения</a></li>
+            <li><a href="">Результаты учеников</a></li>
+            <li><a href="">Отзывы родителей</a></li>
+            <li><a href="">Основатели AiPLUS</a></li>
+          </ul>
+        </div>
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <h1>
+        Подготовим вашего ребёнка <br />
+        к поступлению в НИШ <br />
+        <span>обучая 180 минут в <br />день, 3 раза в <br />неделю</span>
+      </h1>
+    </div>
+    <img src="images/img-children.png" class="img-header-children" alt="" />
+    <img src="images/img-bg-header.svg" class="img-header-bg" alt="" />
+  </header>
+
+  <section class="advantages">
+    <div class="container">
+      <h2>Почему родители выбирают НИШ?</h2>
+
+      <div class="d-flex aling-items-center jc-space-between advantage-card-list">
+        <div class="advantage-card">
+          Государство выделяет <br />
+          1 800 00₸ в год на одного ученика НИШ
+        </div>
+        <div class="advantage-card">
+          Обучение проходит на 3-х языках с учителями со всего мира
+        </div>
+      </div>
+
+      <div class="d-flex aling-items-center jc-space-between advantage-card-list">
+        <div class="advantage-card">
+          НИШ развивает лидерство, ораторское искусство и критическое мышление
+        </div>
+        <div class="advantage-card">
+          Второй иностранный язык на выбор: испанский, корейский, китайский,
+          французкий и др.
+        </div>
+      </div>
+
+      <div class="d-flex aling-items-center jc-space-between advantage-card-list">
+        <div class="advantage-card">
+          Выпускники НИШ могут поступать в ВУЗы без сдачи ЕНТ и без Foundation
+        </div>
+        <div class="advantage-card">
+          НИШ за свой счет проводит международные экзамены для поступления в
+          зарубежные ВУЗы
+        </div>
+      </div>
+    </div>
+    <img src="images/advantages-img.png" class="img-advantage" alt="" />
+  </section>
+
+  <section class="contact-us" style="background-color: #76c22e;">
+    <!-- <div class="container"></div> -->
+    <iframe class="amo-crm-contact-form" src="https://forms.amocrm.ru/rltcdzm" style="width: 100%; height: 600px;"></iframe>
+
+  </section>
+
+  <footer class="bg-green">
+    <div class="container d-flex">
+      <div class="w-50 d-flex align-items-center jc-space-between">
+        <div class="">
+          <div class="sm-links">
+            <a href="" class="fa-brands fa-whatsapp"></a>
+            <a href="" class="fa-brands fa-youtube"></a>
+            <a href="" class="fa-brands fa-instagram"></a>
+            <a href="" class="fa-solid fa-phone"></a>
+          </div>
+          <p>
+            ТОО QADAM БИН 180540002673 <br />
+            Телефон горячей линии: +7 707 705 3366 <br />
+            email: aiplus.kz@gmail.com <br />
+            <br />
+
+            © 2015-2022 aiplus.kz
+          </p>
+        </div>
+        <img src="images/svg2.png" class="img-footer" alt="" />
+      </div>
+      <div class="w-50">
+        <p>
+          Оставляя данные на этом сайте вы соглашаетесь на обработку
+          персональных данных согласно политике конфиденциальности в
+          соответствии с подпунктом 7 пункта 1 статьи 27-1 Закона Республики
+          Казахстан от <br />
+          21 мая 2013 года "О персональных данных и их защите" <br /><br />
+        </p>
+        <a href="">Политика конфиденциальности</a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
